@@ -56,7 +56,7 @@ void funcao1() {
         cout << "Quadrado: " << quadrado << endl;
         cout << "Soma dos dígitos: " << soma << endl;
     } int main(){
-        cout << "Me fale se voce quer executar a funcao 1, 2 ou 3:" << endl;
+        cout << "Me fale se você quer executar a função 1, 2 ou 3:" << endl;
         int funcao;
         cin >> funcao;
         if (funcao == 1){
