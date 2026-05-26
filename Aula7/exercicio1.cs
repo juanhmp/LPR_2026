@@ -1,26 +1,46 @@
-int[] par = new int [5];
-int[] impar = new int[5];
+int[] par = new int[10];
+int[] impar = new int[10];
 int[] entradas = new int[10];
-Console.WriteLine("Digite 10 numeros inteiros e direi se eles sao pares ou impares: ");
-for(int i = 0; i<entradas.Length; i++)
+
+int indicePar = 0;
+int indiceImpar = 0;
+
+Console.WriteLine("Digite 10 números inteiros:");
+
+for (int i = 0; i < entradas.Length; i++)
 {
-    Console.ReadLine("Número " + i +": ") = entradas[i];
+    Console.Write("Número " + (i + 1) + ": ");
+    entradas[i] = int.Parse(Console.ReadLine());
 }
-for(int j = 0; j<entradas.Length; j++)
+
+for (int j = 0; j < entradas.Length; j++)
 {
-    if (entradas[j] % 2 = 0)
+    if (entradas[j] % 2 == 0)
     {
-        entradas[j] = par[];
+        if (indicePar < par.Length)
+        {
+            par[indicePar] = entradas[j];
+            indicePar++;
+        }
     }
     else
     {
-        entradas[j] = impar[];
+        if (indiceImpar < impar.Length)
+        {
+            impar[indiceImpar] = entradas[j];
+            indiceImpar++;
+        }
     }
 }
-for(int k = 0; k<par.Length; k++){
-Console.WriteLine("Numeros pares: " +par[k]);
-}
-for (int l = 0; l<impar.Length; l++)
+
+Console.WriteLine("\nNúmeros pares:");
+for (int k = 0; k < indicePar; k++)
 {
-    Console.WriteLine("Nuneros impares: " +impar[l]);
+    Console.WriteLine(par[k]);
+}
+
+Console.WriteLine("\nNúmeros ímpares:");
+for (int l = 0; l < indiceImpar; l++)
+{
+    Console.WriteLine(impar[l]);
 }
