@@ -1,34 +1,46 @@
-int[] numeros = new int[10];
+int[] par = new int[10];
+int[] impar = new int[10];
+int[] entradas = new int[10];
+
+int indicePar = 0;
+int indiceImpar = 0;
 
 Console.WriteLine("Digite 10 números inteiros:");
 
-for (int i = 0; i < numeros.Length; i++)
+for (int i = 0; i < entradas.Length; i++)
 {
     Console.Write("Número " + (i + 1) + ": ");
-    numeros[i] = int.Parse(Console.ReadLine());
+    entradas[i] = int.Parse(Console.ReadLine());
 }
 
-Console.Write("\nDigite o número que deseja pesquisar: ");
-int pesquisa = int.Parse(Console.ReadLine());
-
-int ocorrencias = 0;
-
-Console.WriteLine("\nPosições encontradas:");
-
-for (int j = 0; j < numeros.Length; j++)
+for (int j = 0; j < entradas.Length; j++)
 {
-    if (numeros[j] == pesquisa)
+    if (entradas[j] % 2 == 0)
     {
-        Console.WriteLine("Posição: " + j);
-        ocorrencias++;
+        if (indicePar < par.Length)
+        {
+            par[indicePar] = entradas[j];
+            indicePar++;
+        }
+    }
+    else
+    {
+        if (indiceImpar < impar.Length)
+        {
+            impar[indiceImpar] = entradas[j];
+            indiceImpar++;
+        }
     }
 }
 
-if (ocorrencias > 0)
+Console.WriteLine("\nNúmeros pares:");
+for (int k = 0; k < indicePar; k++)
 {
-    Console.WriteLine("\nO número apareceu " + ocorrencias + " vez(es).");
+    Console.WriteLine(par[k]);
 }
-else
+
+Console.WriteLine("\nNúmeros ímpares:");
+for (int l = 0; l < indiceImpar; l++)
 {
-    Console.WriteLine("\nO número não foi encontrado no vetor.");
+    Console.WriteLine(impar[l]);
 }
