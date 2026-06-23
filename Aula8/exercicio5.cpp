@@ -46,7 +46,7 @@ void atualizarStatus(){
     int numero = 0;
     cout << "Qual o numero do chamado que voce deseja alterar o status?" << endl;
     cin  >> numero;
-    for (int i=0; i>10; i++){
+    for (int i=0; i<10; i++){
         if (numero= chamados[i].Numero){
             if(chamados[i].Status == "1"){
                 chamados[i].Status = "aberto";
@@ -66,7 +66,7 @@ void atualizarStatus(){
     }
 }
 void classificarPrioridade(){
-    for(int i = 0; i>10; i++){
+    for(int i = 0; i<10; i++){
         cout << "A chamada " << chamados[i].Numero << "tem prioridade ";
         if(chamados[i].Prioridade == 1){
             cout << "baixa" << endl;
@@ -80,7 +80,7 @@ void classificarPrioridade(){
     }
 }
 void estatisticas(){
-    for(int i = 0; i>10; i++){
+    for(int i = 0; i<10; i++){
         int a = 0, ea = 0, r = 0, c = 0;
         if (chamados[i].Status == "1"){
             a++;
