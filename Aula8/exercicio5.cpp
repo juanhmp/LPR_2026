@@ -47,7 +47,7 @@ void atualizarStatus(){
     cout << "Qual o numero do chamado que voce deseja alterar o status?" << endl;
     cin  >> numero;
     for (int i=0; i>10; i++){
-        if (numero = chamados[i].Numero){
+        if (numero= chamados[i].Numero){
             if(chamados[i].Status == "1"){
                 chamados[i].Status = "aberto";
             }
