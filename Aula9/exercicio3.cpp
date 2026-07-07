@@ -6,6 +6,7 @@ int main(){
     list<int>numeros;
     for(int i = 0; i < 101; i++){
         srand(time(NULL));
-        numeros[i] = rand()%101;
+        numeros.push_back(rand()%101);
     }
+    return 0;
 }
